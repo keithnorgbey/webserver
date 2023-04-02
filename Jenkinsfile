@@ -14,5 +14,11 @@ pipeline {
                
             }
         }
+          stage('Run container') {
+            steps {
+               sh 'docker run --name keithsite -p 8081:8080 keithnorgbey/keith_lab:latest'
+            }
+        }
     }
+
 }
